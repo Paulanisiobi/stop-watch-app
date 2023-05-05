@@ -17,6 +17,6 @@ jobs:
             host: ${{ secrets.Host }}
             username: ${{ secrets.USERNAME }}
             key: ${{ secrets.PRIVATE_KEY }}
-            scripts: whoami
+            script: whoami
             
 
