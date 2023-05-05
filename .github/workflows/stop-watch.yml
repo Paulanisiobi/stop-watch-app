@@ -12,9 +12,9 @@ jobs:
         runs-on: ubuntu-latest
         steps:
         - name: use apple boy playbook actions
-          uses: appleboy/ssh-action@v0.1.10
+          uses: appleboy/ssh-action@master
           with:
-            host: ${{ secrets.Host }}
+            host: ${{ secrets.SSH_Host }}
             username: ${{ secrets.USERNAME }}
             key: ${{ secrets.PRIVATE_KEY }}
             script: whoami
