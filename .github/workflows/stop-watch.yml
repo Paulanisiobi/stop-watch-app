@@ -2,10 +2,10 @@ name: Static StopWatch Deploy
 on: 
   push:
     branches:
-      - master
+      - main
   pull_request:
     branches:
-      - master
+      - main
 jobs:
     build:
         name: ssh into vm
