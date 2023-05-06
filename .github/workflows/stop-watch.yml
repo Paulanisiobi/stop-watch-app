@@ -20,6 +20,6 @@ jobs:
             port: ${{ secrets.PORT }}
             script: 
               whoami
-              cd /home/ubuntu/app
+              cd /var/www/html/app
             
 
