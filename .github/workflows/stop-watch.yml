@@ -11,7 +11,7 @@ jobs:
         name: ssh into vm
         runs-on: ubuntu-latest
         steps:
-        - name: use apple boy playbook actions to ssh vm
+        - name: use apple boy playbook actions to ssh VM
           uses: appleboy/ssh-action@master
           with:
             host: ${{ secrets.SSH_Host }}
