@@ -3,7 +3,7 @@
 ![Stopwatch GIF](https://media.giphy.com/media/jueWTklJNqsFu17f90/source.gif)
 
 #### Technologies Used
-Made with vanilla javascript and HTML/CSS
+Made with vanilla javascript and HTML/CSS ..
 #### How it works?
 - START button begins the timer
 - STOP button stops the timer and the stop time gets displayed
