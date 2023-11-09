@@ -19,7 +19,7 @@ jobs:
       - name: Check Dockerfile
         run: cat Dockerfile
 
-      - name: Testing
+      - name: Test
         run: echo "testing"
 
   build:
