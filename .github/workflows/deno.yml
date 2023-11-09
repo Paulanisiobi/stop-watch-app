@@ -40,3 +40,19 @@ jobs:
 
       - name: Building
         run: echo 'buiding'
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: use apple boy playbook actions to ssh vm
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.PRIVATE_KEY }}
+          port: ${{ secrets.PORT }}
+          script: 
+            cd stop-watch-app && git pull origin
+            sudo cp -r stop-watch-app/* /var/www/html
+            sudo systemctl restart nginx
+              
