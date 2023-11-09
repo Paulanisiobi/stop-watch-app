@@ -1,4 +1,4 @@
-name: Deno
+name: stop-watch-app
 
 on:
   push:
@@ -14,8 +14,29 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Setup repo
+      - name: Clone repo
         uses: actions/checkout@v3
 
-      - name: Setup Deno
-        run: echo 'testing'
+      - name: Check Dockerfile
+        run: cat Dockerfile
+
+      - name: Testing
+        run: echo "testing"
+
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: clone repo
+        uses: actions/checkout@v3
+
+      - name: Use Node.js 
+        uses: actions/setup-node@v1
+        with:
+          node-version: 18.x  
+
+      - name: Check node version
+        run: node -v
+
+      - name: Building
+        run: echo 'buiding'
