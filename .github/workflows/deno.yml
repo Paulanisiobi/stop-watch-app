@@ -19,7 +19,7 @@ jobs:
       - name: Check Dockerfile
         run: cat Dockerfile
 
-      - name: Test
+      - name: Testing
         run: echo "testing"
 
   build:
@@ -52,7 +52,8 @@ jobs:
           key: ${{ secrets.PRIVATE_KEY }}
           port: ${{ secrets.PORT }}
           script: |
-            cd stop-watch-app && git pull origin
             sudo cp -r stop-watch-app/* /var/www/html
+            cd stop-watch-app && git pull origin
+            cd /var/www/html
             sudo systemctl restart nginx
               
